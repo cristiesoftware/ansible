@@ -1,0 +1,13 @@
+- hosts: localhost
+  tasks:
+    - name: Download latest CBMR
+      cristie_download:
+        product: cbmr
+        username: "USER@COMPANY.co.uk
+        password: PASSWORD
+        platform: Linux
+        package: rpm
+
+      register: result
+
+    - debug: var=result

@@ -1,0 +1,11 @@
+- hosts: localhost
+  tasks:
+    - name: License CBMR
+      cristie_license:
+        product: cbmr
+        username: "USER@COMPANY.co.uk"
+        password: PASSWORD
+        contract_code: XXXXXXXX-XXXXXXXX-XXXXXXXX-XXXXXXXX
+      register: result
+
+    - debug: var=result 
